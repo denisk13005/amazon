@@ -1,0 +1,75 @@
+.basket {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 96%;
+  height: 25vh;
+  flex-direction: row-reverse;
+  border: 1px solid black;
+  margin: auto;
+  margin-bottom: 10px;
+  span {
+    margin-left: 5px;
+  }
+  .qte {
+    background-color: lightgray;
+    border-radius: 5px;
+    display: inline-block;
+    width: 2vw;
+    height: auto;
+    text-align: center;
+  }
+  .headerProduct {
+    margin-left: 20px;
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .stock {
+      font-size: 14px;
+      color: #116e1e;
+    }
+
+    button {
+      width: max-content;
+      background: transparent;
+      border: none;
+      border-radius: 3px;
+      margin-bottom: 25px;
+      cursor: pointer;
+      color: rgb(63, 124, 180);
+    }
+  }
+  &__description {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  &__price {
+    margin-bottom: 5px;
+    position: relative;
+    small {
+      margin-bottom: 5px;
+      position: absolute;
+      font-size: 10px;
+    }
+  }
+  .imgAndButton {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .imgContainer {
+      width: 90%;
+      height: 90%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.connectionContainer {
+  margin: auto;
+  height: 100vh;
+  padding-top: 50px;
+  position: relative;
+}
+.connectionLogo {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}

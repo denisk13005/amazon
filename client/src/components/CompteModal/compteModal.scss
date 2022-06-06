@@ -1,0 +1,32 @@
+.visible {
+  min-width: 6vw;
+  width: auto;
+  height: auto;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 7vh;
+  left: 0;
+  z-index: 500;
+
+  .modalContainer {
+    position: relative;
+    padding: 5px;
+    p {
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: 10px;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(255, 255, 255);
+      transform: rotate(45deg);
+    }
+  }
+}
+.none {
+  display: none;
+}
