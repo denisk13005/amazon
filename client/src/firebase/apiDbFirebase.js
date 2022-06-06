@@ -34,6 +34,7 @@ export const createUserAuth = (email, password) => {
     .then((userCredential) => {
       const user = userCredential.user
       console.log(user)
+      console.log("créée")
     })
     .catch((error) => {
       console.log(error.code, error.message)
@@ -50,9 +51,10 @@ export const createUserAuth = (email, password) => {
 export const signInAuth = async (email, password) => {
   try {
     const resp = await signInWithEmailAndPassword(auth, email, password)
-
+    console.log(resp)
     return resp.user
   } catch (error) {
-    return "erreur", error.code
+    console.log("error", error)
+    return error.code
   }
 }
