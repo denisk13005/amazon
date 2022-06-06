@@ -53,6 +53,6 @@ export const signInAuth = async (email, password) => {
 
     return resp.user
   } catch (error) {
-    return error.code
+    return "erreur", error.code
   }
 }
