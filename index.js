@@ -4,7 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const path = require('path')
-const stripe = require('stripe')("sk_test_51L4iIZK8J6YcJIPLZOT6VO3j0nTX0vXV4BiVYEG4fMKQ9sHUelSvCDFiHON61g7Z4ACR0Rqd7LoMlxS7k0bWLDMR00tKIdH317")
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
