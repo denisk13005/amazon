@@ -69,10 +69,10 @@
       justify-content: center;
       align-items: center;
       @media screen and (max-width: 900px) {
-        width: 16vw;
+        width: 50px;
         border-radius: 5px;
         position: relative;
-        right: 2px;
+        right: 3px;
       }
     }
     .magnifyingGlass {
@@ -106,13 +106,28 @@
       }
     }
     .user {
-      color: #ff9900;
-      position: absolute;
-      top: 50%;
-      margin: 0;
-      right: 9vw;
-      font-weight: bold;
-      transform: translateY(-50%);
+      @media screen and (max-width: 900px) {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        right: 9vw;
+        font-weight: bold;
+        transform: translateY(-50%);
+        font-size: 14px;
+      }
+    }
+    .userIcon {
+      display: none;
+      @media screen and (max-width: 900px) {
+        position: absolute;
+        left: 90%;
+        transform: translate(-50%);
+        width: 6vw;
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
     .compte {
       @media screen and (max-width: 900px) {
@@ -127,14 +142,19 @@
       flex-direction: column;
       justify-content: center;
       padding: 0px 5px 0px 5px;
+      &:hover {
+        border: 1px solid white;
+        padding: 0px 4px 0px 4px;
+      }
+      @media screen and (max-width: 900px) {
+        &:hover {
+          border: none;
+        }
+      }
 
       cursor: pointer;
       strong {
         font-weight: 900;
-      }
-      &:hover {
-        border: 1px solid white;
-        padding: 0px 4px 0px 4px;
       }
 
       &:hover .cartItems {
@@ -158,6 +178,7 @@
           @media screen and (max-width: 900px) {
             position: absolute;
             right: 18px;
+            top: 0px;
           }
 
           .cartItems {

@@ -66,7 +66,7 @@ const Header = () => {
               </div>
               <br />
               <div className="userIcon">
-                <FaRegUser />
+                <FaRegUser style={{ height: "100%", width: "100%" }} />
               </div>
 
               <strong className="compte">Compte et listes</strong>
