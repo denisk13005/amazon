@@ -1,6 +1,10 @@
 .slideContainer {
   position: relative;
   width: 100%;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
   .chevronContainer {
     height: 97%;
     width: auto;
