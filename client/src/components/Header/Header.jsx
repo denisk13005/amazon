@@ -6,6 +6,8 @@ import search from "../../assets/img/search.svg"
 import { useNavigate, Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import CompteModal from "../CompteModal/CompteModal"
+import { GiHamburgerMenu } from "react-icons/gi"
+import { FaRegUser } from "react-icons/fa"
 const Header = () => {
   const navigate = useNavigate()
 
@@ -32,6 +34,16 @@ const Header = () => {
   }
   return (
     <header className="header">
+      <div className="hambContainer">
+        <GiHamburgerMenu
+          style={{
+            color: "white",
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
+
       <Link to="/home">
         <img className="logo" src={logo} alt="amazon logo" />
       </Link>
@@ -48,9 +60,16 @@ const Header = () => {
               className="rightOptions__option rightOptions__option--user"
               onMouseEnter={openModal}
             >
-              Bonjour {user}
+              <div>
+                <span className="bonjour">Bonjour </span>
+                <span className="user">{user}</span>
+              </div>
               <br />
-              <strong>Compte et listes</strong>
+              <div className="userIcon">
+                <FaRegUser />
+              </div>
+
+              <strong className="compte">Compte et listes</strong>
             </div>
             <CompteModal
               className={compteModalClassName}
@@ -83,7 +102,7 @@ const Header = () => {
 
             <span className="cartItems">{basketItems}</span>
           </div>
-          <strong>Panier</strong>
+          <strong className="panier">Panier</strong>
         </div>
       </nav>
     </header>
