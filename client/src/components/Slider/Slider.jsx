@@ -15,7 +15,6 @@ const Slider = () => {
    */
   const previous = () => {
     setImgClass("")
-
     if (index === 0) {
       setTimeout(() => {
         console.log("timeout")
@@ -40,8 +39,6 @@ const Slider = () => {
     setImgClass("")
     if (index === slide.length - 1) {
       setTimeout(() => {
-        console.log("timeout")
-
         setIndex(0)
         setImgClass("imgSlideRight")
       }, 0.15)
@@ -66,11 +63,7 @@ const Slider = () => {
         <img className="chevron chevron__left" src={chevron} alt="" />
       </div>
 
-      <img
-        className={imgClass || "imgSlideLeft"}
-        src={slide && slide[index].link}
-        alt=""
-      />
+      <img className={imgClass} src={slide && slide[index].link} alt="" />
       <div className="chevronContainer chevronContainer__right" onClick={next}>
         <img className="chevron chevron__right" src={chevron} alt="" />
       </div>
