@@ -27,6 +27,7 @@ const userSlice = createSlice({
   initialState: {
     informations: [],
     userLoggedIn: false,
+    viewPortSize: "desktop",
   },
   reducers: {
     logIn: (state) => {
@@ -35,6 +36,14 @@ const userSlice = createSlice({
     },
     logOut: (state) => {
       state.userLoggedIn = false
+      return state
+    },
+    mobile: (state) => {
+      state.viewPortSize = "mobile"
+      return state
+    },
+    desktop: (state) => {
+      state.viewPortSize = "desktop"
       return state
     },
   },
@@ -46,5 +55,5 @@ const userSlice = createSlice({
   },
 })
 
-export const { logIn, logOut } = userSlice.actions
+export const { logIn, logOut, mobile, desktop } = userSlice.actions
 export default userSlice.reducer
