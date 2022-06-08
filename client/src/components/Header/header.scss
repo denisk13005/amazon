@@ -9,7 +9,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-<<<<<<< HEAD
   .leftOptions {
     display: flex;
     align-items: center;
@@ -26,52 +25,6 @@
         bottom: 9px;
         left: 2px;
       }
-=======
-  @media screen and (max-width: 900px) {
-    height: 76px;
-    position: relative;
-    justify-content: space-between;
-  }
-  .hambContainer {
-    display: none;
-
-    @media screen and (max-width: 900px) {
-      position: absolute;
-      display: block;
-      width: 28px;
-      top: 9px;
-      left: 9px;
-    }
-  }
-  .logo {
-    width: 100px;
-    color: white;
-    margin-left: 20px;
-    @media screen and (max-width: 900px) {
-      position: absolute;
-      width: 77px;
-      top: 13px;
-      left: 29px;
-    }
-  }
-  .search {
-    display: flex;
-    align-items: center;
-    width: 61.7vw;
-    height: 4.3vh;
-    margin-bottom: 1.4vh;
-    margin-left: 10.1vw;
-    border-radius: 5px;
-    overflow: hidden;
-    @media screen and (max-width: 900px) {
-      position: absolute;
-      bottom: 6px;
-      width: 356px;
-      height: 43px;
-      left: 50%;
-      margin: 0;
-      transform: translate(-50%);
->>>>>>> 38aaa89b53549c1aed82f87c9eff20294eb730dd
     }
 
     .logo {
@@ -82,7 +35,6 @@
     .search {
       display: flex;
       align-items: center;
-<<<<<<< HEAD
       width: 61.7vw;
       height: 4.3vh;
       margin-bottom: 1.4vh;
@@ -109,19 +61,6 @@
         font-weight: 100;
         cursor: pointer;
       }
-=======
-      @media screen and (max-width: 900px) {
-        width: 50px;
-        border-radius: 5px;
-        position: relative;
-        right: 3px;
-      }
-    }
-    .magnifyingGlass {
-      width: 50%;
-      font-weight: 100;
-      cursor: pointer;
->>>>>>> 38aaa89b53549c1aed82f87c9eff20294eb730dd
     }
   }
   .rightOptions {
