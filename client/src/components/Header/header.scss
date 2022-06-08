@@ -14,6 +14,9 @@
     align-items: center;
     .hambContainer {
       width: 25px;
+      @media screen and (min-width: 900px) {
+        display: none;
+      }
       .hambIcon {
         height: 100%;
         width: 100%;
@@ -68,10 +71,51 @@
     margin-left: 1vw;
     margin-bottom: 1.5vh;
     flex-grow: 1;
-    // padding-right: 15px;
+    padding-right: 15px;
     height: 6.5vh;
     min-width: 350px;
     position: relative;
+    @media screen and (max-width: 900px) {
+      min-width: 200px;
+      height: 6vh;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .bonjour {
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+    .user {
+      @media screen and (max-width: 900px) {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        right: 9vw;
+        font-weight: bold;
+        transform: translateY(-50%);
+        font-size: 14px;
+      }
+    }
+    .userIcon {
+      display: none;
+      @media screen and (max-width: 900px) {
+        position: absolute;
+        left: 90%;
+        transform: translate(-50%);
+        width: 6vw;
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .compte {
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
 
     &__option {
       height: 80%;
@@ -80,14 +124,19 @@
       flex-direction: column;
       justify-content: center;
       padding: 0px 5px 0px 5px;
+      &:hover {
+        border: 1px solid white;
+        padding: 0px 4px 0px 4px;
+      }
+      @media screen and (max-width: 900px) {
+        &:hover {
+          border: none;
+        }
+      }
 
       cursor: pointer;
       strong {
         font-weight: 900;
-      }
-      &:hover {
-        border: 1px solid white;
-        padding: 0px 4px 0px 4px;
       }
 
       &:hover .cartItems {
@@ -96,6 +145,11 @@
       &--user {
         position: relative;
       }
+      &--return {
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
       &--basket {
         display: flex;
         flex-direction: row;
@@ -103,6 +157,11 @@
         justify-content: start;
         .imgContainer {
           position: relative;
+          @media screen and (max-width: 900px) {
+            position: absolute;
+            right: 18px;
+            top: 0px;
+          }
 
           .cartItems {
             position: absolute;
@@ -115,6 +174,11 @@
         }
         strong {
           margin-bottom: 0.7vh;
+        }
+        .panier {
+          @media screen and (max-width: 900px) {
+            display: none;
+          }
         }
       }
     }
