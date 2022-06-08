@@ -9,21 +9,34 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  @media (max-width: 900px) {
+    height: 120px;
+  }
   .leftOptions {
     display: flex;
     align-items: center;
-    .hambContainer {
-      width: 25px;
-      @media screen and (min-width: 900px) {
-        display: none;
-      }
-      .hambIcon {
-        height: 100%;
-        width: 100%;
-        color: white;
-        position: relative;
-        bottom: 9px;
-        left: 2px;
+    @media screen and (max-width: 900px) {
+      height: 100%;
+      align-items: start;
+      flex-direction: column;
+      width: 100%;
+      padding: 5px;
+    }
+    .hambAndLogo {
+      display: flex;
+      .hambContainer {
+        width: 25px;
+        @media screen and (min-width: 900px) {
+          display: none;
+        }
+        .hambIcon {
+          height: 100%;
+          width: 100%;
+          color: white;
+          position: relative;
+          bottom: 10px;
+          left: 2px;
+        }
       }
     }
 
@@ -41,6 +54,12 @@
       margin-left: 10.1vw;
       border-radius: 5px;
       overflow: hidden;
+      @media screen and (max-width: 900px) {
+        width: 97%;
+        height: 45px;
+        margin-left: 51%;
+        transform: translate(-50%);
+      }
 
       input {
         width: 100%;
@@ -55,6 +74,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 900px) {
+          width: 60px;
+          border-radius: 5px;
+          position: relative;
+          right: 3px;
+        }
       }
       .magnifyingGlass {
         width: 50%;
@@ -81,6 +106,11 @@
       position: absolute;
       right: 0;
       top: 0;
+    }
+    .userDescriptionContainer {
+      display: flex;
+
+      height: 100%;
     }
     .bonjour {
       @media screen and (max-width: 900px) {
@@ -109,6 +139,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+    }
+    .userIconContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .userIcon {
+        width: 100%;
       }
     }
     .compte {
@@ -170,6 +209,7 @@
             font-weight: 600;
             font-size: 18px;
             text-align: center;
+            top: 2px;
           }
         }
         strong {

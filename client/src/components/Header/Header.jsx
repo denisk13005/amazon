@@ -7,6 +7,7 @@ import { useNavigate, Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import CompteModal from "../CompteModal/CompteModal"
 import { GiHamburgerMenu } from "react-icons/gi"
+import { FaRegUser } from "react-icons/fa"
 const Header = () => {
   const navigate = useNavigate()
 
@@ -34,12 +35,14 @@ const Header = () => {
   return (
     <header className="header">
       <div className="leftOptions">
-        <div className="hambContainer">
-          <GiHamburgerMenu className="hambIcon" />
+        <div className="hambAndLogo">
+          <div className="hambContainer">
+            <GiHamburgerMenu className="hambIcon" />
+          </div>
+          <Link to="/home">
+            <img className="logo" src={logo} alt="amazon logo" />
+          </Link>
         </div>
-        <Link to="/home">
-          <img className="logo" src={logo} alt="amazon logo" />
-        </Link>
         <div className="search" onMouseEnter={closeModal}>
           <input type="search" />
           <div className="searchImgContainer">
@@ -55,9 +58,12 @@ const Header = () => {
               className="rightOptions__option rightOptions__option--user"
               onMouseEnter={openModal}
             >
-              <div>
+              <div className="userDescriptionContainer">
                 <span className="bonjour">Bonjour </span>
                 <span className="user">{user}</span>
+                <span className="userIconContainer">
+                  <FaRegUser className="userIcon" />
+                </span>
               </div>
               <br />
 
