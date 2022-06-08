@@ -6,6 +6,8 @@ import search from "../../assets/img/search.svg"
 import { useNavigate, Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import CompteModal from "../CompteModal/CompteModal"
+import { GiHamburgerMenu } from "react-icons/gi"
+
 const Header = () => {
   const navigate = useNavigate()
 
@@ -32,15 +34,21 @@ const Header = () => {
   }
   return (
     <header className="header">
-      <Link to="/home">
-        <img className="logo" src={logo} alt="amazon logo" />
-      </Link>
-      <div className="search" onMouseEnter={closeModal}>
-        <input type="search" />
-        <div className="searchImgContainer">
-          <img src={search} alt="search icone" className="magnifyingGlass" />
+      <div className="leftOptions">
+        <div className="hambContainer">
+          <GiHamburgerMenu className="hambIcon" />
+        </div>
+        <Link to="/home">
+          <img className="logo" src={logo} alt="amazon logo" />
+        </Link>
+        <div className="search" onMouseEnter={closeModal}>
+          <input type="search" />
+          <div className="searchImgContainer">
+            <img src={search} alt="search icone" className="magnifyingGlass" />
+          </div>
         </div>
       </div>
+
       <nav className="rightOptions">
         {logged ? (
           <>
