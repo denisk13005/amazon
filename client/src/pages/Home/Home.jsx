@@ -74,6 +74,7 @@ const Home = () => {
               </div>
               <div className="productRow">
                 <Product
+                  width={100}
                   id={6}
                   description={"test"}
                   price={29}

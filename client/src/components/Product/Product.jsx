@@ -13,25 +13,28 @@ import "./product.scss"
  * @param {number} id id of the product
  * @returns {JSX.Element} JSX element of the product
  */
-const Product = ({ description, price, smallPrice, stars, img, id }) => {
-  const product = { description, price, smallPrice, stars, img, id }
+const Product = ({ description, price, smallPrice, stars, img, id, width }) => {
+  const product = { description, price, smallPrice, stars, img, id, width }
   const dispatch = useDispatch()
   const addBasket = () => {
     dispatch(addProduct(product))
   }
+  console.log(product)
 
   return (
-    <div className="product">
-      <p className="product__description">{description}</p>
-      <p className="product__price">
-        €<strong>{price}</strong>.<small>{smallPrice}</small>
-      </p>
-      <div className="product__stars">
-        {Array(stars)
-          .fill()
-          .map((_, i) => (
-            <span key={i}>⭐</span>
-          ))}
+    <div className="product" style={{ width: width + "%" }}>
+      <div className="upProductContainer">
+        <p className="product__description">{description}</p>
+        <p className="product__price">
+          €<strong>{price}</strong>.<small>{smallPrice}</small>
+        </p>
+        <div className="product__stars">
+          {Array(stars)
+            .fill()
+            .map((_, i) => (
+              <span key={i}>⭐</span>
+            ))}
+        </div>
       </div>
       <div className="imgAndButton">
         <div className="imgContainer">
