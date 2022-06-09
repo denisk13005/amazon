@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { logOut } from "../../utils/Redux-toolkit/user"
+import { reset } from "../../utils/Redux-toolkit/products"
 import "./compteModal.scss"
 /**
  * modal to display user informations and logout when hover on the user icon
@@ -15,6 +16,7 @@ const CompteModal = ({ className, closeModal }) => {
   const disconnect = () => {
     console.log("disconnect")
     dispatch(logOut())
+    dispatch(reset())
     navigate("/")
   }
   return (

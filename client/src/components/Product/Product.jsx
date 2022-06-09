@@ -1,6 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import { addProduct } from "../../utils/Redux-toolkit/products"
+import { MdAddShoppingCart } from "react-icons/md"
 import "./product.scss"
 /**
  *
@@ -37,7 +38,12 @@ const Product = ({ description, price, smallPrice, stars, img, id }) => {
           <img src={img} alt="" className="product__image" />
         </div>
         {}
-        <button onClick={addBasket}>Ajouter au panier</button>
+        <button onClick={addBasket}>
+          <span className="desktopMsg">Ajouter au panier</span>{" "}
+          <span className="mobileICon">
+            <MdAddShoppingCart className="basketIcon" />
+          </span>
+        </button>
       </div>
     </div>
   )

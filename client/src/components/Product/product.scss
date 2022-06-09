@@ -39,15 +39,38 @@
       overflow: hidden;
     }
     img {
-      object-fit: contain;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
     button {
       margin-top: 20px;
-      width: 300px;
+      width: 70%;
       height: 30px;
       background: linear-gradient(#f7e6b0, #e8c353);
       border: 1px solid #9d7b27;
       border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .desktopMsg {
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+      .mobileICon {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 20%;
+        .basketIcon {
+          width: 90%;
+          height: 90%;
+        }
+        @media screen and (min-width: 900px) {
+          display: none;
+        }
+      }
     }
   }
 }
