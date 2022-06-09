@@ -1,6 +1,5 @@
 .paymentContainer {
   width: 100%;
-  min-width: 1000px;
   margin: auto;
   min-height: 100vh;
   background-color: white;
@@ -21,10 +20,14 @@
       .paymentLogo {
         width: 10vh;
         cursor: pointer;
+        padding-top: 10px;
       }
       h1 {
-        font-size: 3vh;
+        font-size: 2rem;
         font-weight: 400;
+        @media screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
       }
       .paymentPadlock {
         width: 2vh;
@@ -37,6 +40,9 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
+    @media screen and (max-width: 900px) {
+      flex-direction: column-reverse;
+    }
     &__left {
       flex-grow: 0.7;
       position: relative;
@@ -120,6 +126,14 @@
       padding: 20px;
       border-radius: 10px;
       height: max-content;
+      @media screen and (max-width: 900px) {
+        width: 80%;
+        margin-top: 10px;
+        margin: auto;
+        height: 300px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
       .recap {
         font-weight: 600;
         margin-bottom: 20px;
