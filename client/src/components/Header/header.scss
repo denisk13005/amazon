@@ -9,13 +9,13 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  @media (max-width: 900px) {
+  @media (max-width: 1500px) {
     height: 120px;
   }
   .leftOptions {
     display: flex;
     align-items: center;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1500px) {
       height: 100%;
       align-items: start;
       flex-direction: column;
@@ -26,7 +26,7 @@
       display: flex;
       .hambContainer {
         width: 25px;
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 1500px) {
           display: none;
         }
         .hambIcon {
@@ -54,7 +54,7 @@
       margin-left: 10.1vw;
       border-radius: 5px;
       overflow: hidden;
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1500px) {
         width: 97%;
         height: 45px;
         margin-left: 51%;
@@ -74,7 +74,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1500px) {
           width: 60px;
           border-radius: 5px;
           position: relative;
@@ -100,12 +100,13 @@
     height: 6.5vh;
     min-width: 350px;
     position: relative;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1500px) {
       min-width: 200px;
       height: 6vh;
       position: absolute;
       right: 0;
       top: 0;
+      align-items: flex-start;
     }
     .userDescriptionContainer {
       display: flex;
@@ -113,12 +114,12 @@
       height: 100%;
     }
     .bonjour {
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1500px) {
         display: none;
       }
     }
     .user {
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1500px) {
         position: absolute;
         top: 50%;
         margin: 0;
@@ -131,19 +132,19 @@
 
     .userIconContainer {
       width: 100%;
-      height: 100%;
+      height: 50px;
       display: flex;
       align-items: center;
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 1500px) {
         display: none;
       }
       .userIcon {
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1500px) {
           position: absolute;
           left: 90%;
           transform: translate(-50%);
           width: 6vw;
-          height: 3vh;
+          height: 2vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -151,7 +152,7 @@
       }
     }
     .compte {
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1500px) {
         display: none;
       }
     }
@@ -166,7 +167,7 @@
         border: 1px solid white;
         padding: 0px 4px 0px 4px;
       }
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1500px) {
         &:hover {
           border: none;
         }
@@ -186,7 +187,7 @@
         justify-content: center;
       }
       &--return {
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1500px) {
           display: none;
         }
       }
@@ -197,7 +198,7 @@
         justify-content: start;
         .imgContainer {
           position: relative;
-          @media screen and (max-width: 900px) {
+          @media screen and (max-width: 1500px) {
             position: absolute;
             right: 18px;
             top: 0px;
@@ -217,7 +218,7 @@
           margin-bottom: 0.7vh;
         }
         .panier {
-          @media screen and (max-width: 900px) {
+          @media screen and (max-width: 1500px) {
             display: none;
           }
         }

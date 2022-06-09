@@ -51,7 +51,7 @@ const Header = () => {
         </div>
       </div>
 
-      <nav className="rightOptions">
+      <nav className="rightOptions" onMouseEnter={closeModal}>
         {logged ? (
           <>
             <div
@@ -68,11 +68,11 @@ const Header = () => {
               <br />
 
               <strong className="compte">Compte et listes</strong>
+              <CompteModal
+                className={compteModalClassName}
+                closeModal={closeModal}
+              />
             </div>
-            <CompteModal
-              className={compteModalClassName}
-              closeModal={closeModal}
-            />
           </>
         ) : (
           <>

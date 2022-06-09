@@ -5,9 +5,15 @@
   background-color: white;
   color: black;
   position: absolute;
-  top: 7vh;
-  left: 0;
   z-index: 500;
+  bottom: 0;
+  right: 0;
+  transform: translateY(120%);
+  border-radius: 2px;
+  @media screen and (max-width: 1500px) {
+    background-color: orange;
+    color: white;
+  }
 
   .modalContainer {
     position: relative;
@@ -24,6 +30,9 @@
       height: 10px;
       background-color: rgb(255, 255, 255);
       transform: rotate(45deg);
+      @media screen and (max-width: 1500px) {
+        background-color: orange;
+      }
     }
   }
 }
