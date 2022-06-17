@@ -1,0 +1,106 @@
+.carrousselContainer {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+  .carrousselContainer {
+    display: none;
+  }
+}
+.leftArrowContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  left: 0;
+  width: 8%;
+  height: 40%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.1;
+  border: 1px solid rgba(255, 255, 255);
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 10px;
+}
+.leftArrow {
+  position: absolute;
+  left: 2vw;
+  top: 20%;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  transform: rotate(45deg) translate(-40%, -50%);
+  cursor: pointer;
+}
+
+.rightArrowContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  right: 0;
+  width: 8%;
+  height: 40%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.1;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 10px;
+}
+.rightArrow {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  top: 20%;
+  right: 2vw;
+  font-weight: bold;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg) translate(40%, -50%);
+  cursor: pointer;
+}
+.carroussel {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+}
+.endAndBeginTransition {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+}
+.carroussel__item {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.carroussel__item--begin {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.carroussel__item--begin img {
+  width: 10%;
+}
+
+.carrousselContainer img {
+  width: 100%;
+  height: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}

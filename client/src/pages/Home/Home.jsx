@@ -5,6 +5,7 @@ import PleaseLogin from "../../components/PleaseLoggin/PleaseLogin"
 import Product from "../../components/Product/Product"
 import Header from "../../components/Header/Header"
 import Slider from "../../components/Slider/Slider"
+import Carroussel from "../../components/Carrousel/Carroussel"
 
 const Home = () => {
   const userLoggedIn = useSelector((state) => state.user.userLoggedIn)
@@ -15,7 +16,8 @@ const Home = () => {
       <main className="homeMainContainer">
         {userLoggedIn ? (
           <>
-            <Slider />
+            {/* <Slider /> */}
+            <Carroussel transition={0.4} />
             <section className="productsContainer">
               <div className="productRow">
                 <Product

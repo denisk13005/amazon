@@ -19,7 +19,6 @@ const Product = ({ description, price, smallPrice, stars, img, id, width }) => {
   const addBasket = () => {
     dispatch(addProduct(product))
   }
-  console.log(product)
 
   return (
     <div className="product" style={{ width: width + "%" }}>
