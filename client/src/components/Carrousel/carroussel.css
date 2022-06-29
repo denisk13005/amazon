@@ -20,7 +20,7 @@
   top: 0%;
   left: 0;
   width: 8%;
-  height: 40%;
+  height: 55%;
   background-color: rgb(0, 0, 0);
   opacity: 0.1;
   border: 1px solid rgba(255, 255, 255);
@@ -31,7 +31,7 @@
 .leftArrow {
   position: absolute;
   left: 2vw;
-  top: 20%;
+  top: 27%;
   border-left: 3px solid white;
   border-bottom: 3px solid white;
   font-weight: bold;
@@ -50,7 +50,7 @@
   top: 0%;
   right: 0;
   width: 8%;
-  height: 40%;
+  height: 55%;
   background-color: rgb(0, 0, 0);
   opacity: 0.1;
   border: 1px solid rgb(255, 255, 255);
@@ -62,7 +62,7 @@
   position: absolute;
   z-index: 2;
   color: white;
-  top: 20%;
+  top: 27%;
   right: 2vw;
   font-weight: bold;
   border-right: 3px solid white;
