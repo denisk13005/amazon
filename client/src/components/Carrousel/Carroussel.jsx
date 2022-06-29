@@ -50,8 +50,11 @@ const Carroussel = (props) => {
 
   return (
     <section className="carrousselContainer">
-      <div className="leftArrowContainer" onClick={previousSlide}></div>
-      <span className="leftArrow" onClick={previousSlide}></span>
+      <div
+        className="arrowContainer leftArrowContainer"
+        onClick={previousSlide}
+      ></div>
+      <span className="arrow leftArrow" onClick={previousSlide}></span>
       <div
         className={carrousselClassname}
         style={{
@@ -75,8 +78,11 @@ const Carroussel = (props) => {
           <img src={imgs[0].src} alt="" />
         </div>
       </div>
-      <div className="rightArrowContainer" onClick={nextSlide}></div>
-      <span className="rightArrow" onClick={nextSlide}></span>
+      <div
+        className="arrowContainer rightArrowContainer"
+        onClick={nextSlide}
+      ></div>
+      <span className="arrow rightArrow" onClick={nextSlide}></span>
     </section>
   )
 }
