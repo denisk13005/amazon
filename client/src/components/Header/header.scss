@@ -119,6 +119,8 @@
       }
     }
     .user {
+      margin-left: 8px;
+      width: max-content;
       @media screen and (max-width: 1500px) {
         position: absolute;
         top: 50%;

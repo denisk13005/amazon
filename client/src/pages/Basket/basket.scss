@@ -3,20 +3,16 @@
   justify-content: center;
   margin: 20px;
   img {
-    width: 100%;
+    width: 80%;
   }
 }
 .basketMain {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  min-height: 50vh;
   @media screen and (max-width: 1200px) {
     justify-content: space-around;
-  }
-  @media screen and (max-width: 900px) {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   .basket {
@@ -61,20 +57,29 @@
       padding-bottom: 20px;
       width: 96%;
       border-bottom: 1px solid lightgray;
+      @media screen and (max-width: 900px) {
+        font-size: 24px;
+      }
     }
   }
   .continuePurchase {
     width: 100%;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 5%;
     h2 {
       font-size: 48px;
+      @media screen and (max-width: 900px) {
+        font-size: 24px;
+      }
     }
     p {
       cursor: pointer;
       margin-top: 50px;
       font-size: 32px;
       animation: fadeIn 1s ease-in-out infinite;
+      @media screen and (max-width: 900px) {
+        font-size: 24px;
+      }
     }
   }
 
