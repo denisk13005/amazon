@@ -69,6 +69,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
       .desktopMsg {
         @media screen and (max-width: 900px) {
           display: none;
