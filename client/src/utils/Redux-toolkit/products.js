@@ -26,12 +26,6 @@ const productsSlice = createSlice({
             console.log(product.qte)
           }
         })
-        // we return the rest of
-        const filteredProducts = state.products.filter(
-          (el) => el.id !== action.payload.id
-        )
-        // we add the product to the basket
-        state.products = [...filteredProducts, productPresent]
       }
       // if the product is not in the basket, we add it
       else {
