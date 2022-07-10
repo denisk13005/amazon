@@ -14,6 +14,11 @@
   @media screen and (max-width: 1200px) {
     justify-content: space-around;
   }
+  @media (max-width: 950px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 25px;
+  }
 
   .basket {
     &__left {
@@ -22,7 +27,7 @@
       @media screen and (max-width: 1200px) {
         width: 60%;
       }
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 950px) {
         width: 95%;
       }
     }
@@ -35,7 +40,7 @@
       @media screen and (max-width: 1200px) {
         width: 30%;
       }
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 950px) {
         width: 95%;
         margin-top: 10px;
         text-align: center;
