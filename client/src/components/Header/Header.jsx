@@ -59,19 +59,22 @@ const Header = () => {
               onMouseEnter={openModal}
             >
               <div className="userDescriptionContainer">
-                <span className="bonjour">Bonjour </span>
-                <span className="user">{user}</span>
-                <span className="userIconContainer">
-                  <FaRegUser className="userIcon" />
-                </span>
-              </div>
-              <br />
+                <div>
+                  <span className="bonjour">Bonjour, </span>
+                  <span className="user">{user}</span>
+                </div>
 
-              <strong className="compte">Compte et listes</strong>
-              <CompteModal
-                className={compteModalClassName}
-                closeModal={closeModal}
-              />
+                <div className="userIconContainer">
+                  <FaRegUser className="userIcon" />
+                </div>
+                <span>
+                  <strong className="compte">Compte et listes</strong>
+                </span>
+                <CompteModal
+                  className={compteModalClassName}
+                  closeModal={closeModal}
+                />
+              </div>
             </div>
           </>
         ) : (
