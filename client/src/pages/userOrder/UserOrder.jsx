@@ -4,8 +4,10 @@ import { useSelector } from "react-redux"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import PleaseLogin from "../../components/PleaseLoggin/PleaseLogin"
+import Product from "../../components/Product/Product"
 import { AiOutlineSearch } from "react-icons/ai"
 import "./userOrder.scss"
+import OrderProduct from "../../components/OrderProduct/OrderProduct"
 const UserOrder = () => {
   const order = useSelector((state) => state.products.products)
   // const userLoggedIn = useSelector((state) => state.user.userLoggedIn)
@@ -29,6 +31,7 @@ const UserOrder = () => {
                 <button className="orderBtn">Rechercher</button>
               </div>
             </header>
+            <OrderProduct />
           </main>
           <Footer />
         </>

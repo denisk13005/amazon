@@ -1,0 +1,65 @@
+.headerOrderProduct {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f2f2;
+  border: 1px solid #d5d9d9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 10px 25px;
+
+  .leftContain {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    width: 40%;
+    p {
+      font-weight: 200;
+    }
+  }
+}
+.sectionOrderProduct,
+.archive {
+  background-color: white;
+}
+.sectionOrderProduct {
+  border-left: 1px solid #d5d9d9;
+  border-right: 1px solid #d5d9d9;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 20px;
+  .left {
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    .btn {
+      margin-bottom: 5px;
+      background-color: #ffd814;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 30px;
+      font-size: 12px;
+      box-shadow: 1px 1px 9px #d5d9d9;
+      cursor: pointer;
+      &:hover {
+        background-color: #ffc526;
+      }
+    }
+    .first {
+      margin-bottom: 20px;
+    }
+    .last {
+      background-color: white;
+      border: 1px solid #d5d9d9;
+      box-shadow: 2px 3px 9px #d5d9d9;
+      &:hover {
+        background-color: #eeeeee;
+      }
+    }
+  }
+}
+.archive {
+  border: 1px solid #d5d9d9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

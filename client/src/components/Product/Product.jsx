@@ -42,7 +42,7 @@ const Product = ({ description, price, smallPrice, stars, img, id, width }) => {
           <img src={img} alt="" className="product__image" />
         </div>
         {}
-        <button onClick={addBasket}>
+        <button id="productBtn" onClick={addBasket}>
           <span className="desktopMsg">Ajouter au panier</span>{" "}
           <span className="mobileICon">
             <MdAddShoppingCart className="basketIcon" />
