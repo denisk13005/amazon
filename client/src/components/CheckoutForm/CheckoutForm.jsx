@@ -10,8 +10,10 @@ import {
 } from "@stripe/react-stripe-js"
 import axios from "axios"
 import "./checkoutForm.scss"
+import { useNavigate } from "react-router-dom"
 
 const CheckoutFormBuild = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const totalPrice = useSelector((state) => state.products.totalPrice)
   const stripe = useStripe()
@@ -46,7 +48,8 @@ const CheckoutFormBuild = () => {
         if (response.data.success) {
           alert("paiement effectué")
           setProcessed(false)
-          dispatch(reset())
+          navigate("/userOrder")
+          // dispatch(reset())
         }
       } catch (err) {
         console.log(err)

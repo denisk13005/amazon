@@ -5,6 +5,7 @@ import Basket from "../../pages/Basket/Basket"
 import Connection from "../../pages/Connection/Connection"
 import Home from "../../pages/Home/Home"
 import Payment from "../../pages/Payment/Payment"
+import UserOrder from "../../pages/userOrder/UserOrder"
 
 const routes = () => {
   return (
@@ -13,7 +14,8 @@ const routes = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Connection />} />
         <Route path="/basket" element={<Basket />} />
-        <Route path="/payment" om element={<Payment />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/userOrder" element={<UserOrder />} />
       </Routes>
     </BrowserRouter>
   )
