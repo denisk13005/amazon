@@ -11,6 +11,7 @@ import {
 import axios from "axios"
 import "./checkoutForm.scss"
 import { useNavigate } from "react-router-dom"
+import { transactionDate } from "../../utils/Redux-toolkit/products"
 
 const CheckoutFormBuild = () => {
   const navigate = useNavigate()
@@ -47,6 +48,7 @@ const CheckoutFormBuild = () => {
         console.log(response)
         if (response.data.success) {
           alert("paiement effectué")
+          dispatch(transactionDate(new Date().toString()))
           setProcessed(false)
           navigate("/userOrder")
           // dispatch(reset())

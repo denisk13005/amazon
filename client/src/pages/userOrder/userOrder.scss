@@ -1,0 +1,38 @@
+.orderMain {
+  max-width: 1000px;
+  margin: auto;
+}
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  &__left {
+    font-weight: 500;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .searchOrderIcon {
+      position: absolute;
+      left: 5px;
+    }
+    .searchOrder {
+      font-size: 12px;
+      width: 15vw;
+      padding-left: 30px;
+      height: 80%;
+      &:focus {
+        outline: none;
+      }
+    }
+    .orderBtn {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 5px 15px;
+      margin-left: 10px;
+    }
+  }
+}

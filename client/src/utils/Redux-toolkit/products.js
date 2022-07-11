@@ -7,6 +7,7 @@ const productsSlice = createSlice({
     basketItems: 0,
     loading: false,
     totalPrice: 0,
+    transactionDate: null,
   },
   reducers: {
     /**
@@ -70,8 +71,12 @@ const productsSlice = createSlice({
       state.basketItems = 0
       state.totalPrice = 0
     },
+    transactionDate: (state, action) => {
+      state.transactionDate = action.payload
+    },
   },
 })
 
-export const { addProduct, removeProduct, reset } = productsSlice.actions
+export const { addProduct, removeProduct, reset, transactionDate } =
+  productsSlice.actions
 export default productsSlice.reducer
