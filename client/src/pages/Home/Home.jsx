@@ -1,10 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { useSelector } from "react-redux"
 import "./home.scss"
 import PleaseLogin from "../../components/PleaseLoggin/PleaseLogin"
 import Product from "../../components/Product/Product"
 import Header from "../../components/Header/Header"
-import Slider from "../../components/Slider/Slider"
 import Carroussel from "../../components/Carrousel/Carroussel"
 
 const Home = () => {

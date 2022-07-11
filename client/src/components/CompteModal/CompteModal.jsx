@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { logOut } from "../../utils/Redux-toolkit/user"
 import { reset } from "../../utils/Redux-toolkit/products"
+import PropTypes from "prop-types"
 import "./compteModal.scss"
 /**
  * modal to display user informations and logout when hover on the user icon
@@ -26,6 +27,11 @@ const CompteModal = ({ className, closeModal }) => {
       </div>
     </div>
   )
+}
+
+CompteModal.propTypes = {
+  className: PropTypes.string.isRequired,
+  closeModal: PropTypes.func.isRequired,
 }
 
 export default CompteModal

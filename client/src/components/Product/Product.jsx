@@ -2,7 +2,9 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { addProduct } from "../../utils/Redux-toolkit/products"
 import { MdAddShoppingCart } from "react-icons/md"
+import PropTypes from "prop-types"
 import "./product.scss"
+
 /**
  *
  * @param {string} description description of the product
@@ -49,6 +51,15 @@ const Product = ({ description, price, smallPrice, stars, img, id, width }) => {
       </div>
     </div>
   )
+}
+
+Product.propTypes = {
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  smallPrice: PropTypes.number.isRequired,
+  stars: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 }
 
 export default Product

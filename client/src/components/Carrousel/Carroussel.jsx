@@ -2,12 +2,18 @@ import React, { useState } from "react"
 import { imgs } from "../../assets/backgroundSlide.js"
 import "./carroussel.css"
 import { useEffect } from "react"
+import PropTypes from "prop-types"
 
-const Carroussel = (props) => {
+/**
+ *
+ * @param {number} transition time for the slide transition
+ * @returns {ReactComponentElement} carroussel
+ */
+const Carroussel = ({ transition }) => {
   const [translateValue, setTranslateValue] = useState(-100)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [carrousselClassname, setCarrousselClassname] = useState("carroussel")
-  const normalTransition = props.transition
+  const normalTransition = transition
   const fastTransition = "0"
   const toBegin = () => {
     setTimeout(() => {
@@ -35,6 +41,7 @@ const Carroussel = (props) => {
   useEffect(() => {
     currentSlide === -1 && toEnd()
     currentSlide === imgs.length && toBegin()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide])
 
   const previousSlide = () => {
@@ -46,7 +53,6 @@ const Carroussel = (props) => {
     setCurrentSlide(currentSlide + 1)
     setTranslateValue(translateValue - 100)
   }
-  console.log("currentSlide", currentSlide, "translateValue", translateValue)
 
   return (
     <section className="carrousselContainer">
@@ -85,6 +91,10 @@ const Carroussel = (props) => {
       <span className="arrow rightArrow" onClick={nextSlide}></span>
     </section>
   )
+}
+
+Carroussel.propTypes = {
+  transition: PropTypes.number.isRequired,
 }
 
 export default Carroussel
