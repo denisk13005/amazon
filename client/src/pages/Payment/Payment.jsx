@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import "./payment.scss"
 import logo from "../../assets/img/blackLogo.png"
 import { useSelector } from "react-redux"
@@ -14,6 +14,13 @@ const Payment = () => {
   const items = useSelector((state) => state.products.basketItems)
   const products = useSelector((state) => state.products.products)
   const totalPrice = useSelector((state) => state.products.totalPrice)
+  const user = useSelector((state) => state.user.informations[0])
+  console.log(products)
+
+  let datas = {
+    user,
+    products,
+  }
 
   useEffect(() => {
     if (items === 0) {
@@ -104,7 +111,7 @@ const Payment = () => {
               Montant Total : <span>{totalPrice.toFixed(2)}€</span>
             </div>
             <p>Total de la commande, TVA incluse</p>
-            <CheckoutForm />
+            <CheckoutForm datas={datas} />
           </div>
         </main>
       </div>

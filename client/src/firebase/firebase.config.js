@@ -22,4 +22,5 @@ const app = initializeApp(firebaseConfig)
 export const db = getFirestore(app)
 //collection definition
 export const usersCollectionRef = collection(db, "users")
+export const ordersCollectionRef = collection(db, "orders")
 export const auth = getAuth(app)

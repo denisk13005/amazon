@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useSelector } from "react-redux"
 import "./home.scss"
 import PleaseLogin from "../../components/PleaseLoggin/PleaseLogin"
@@ -7,8 +7,9 @@ import Header from "../../components/Header/Header"
 import Carroussel from "../../components/Carrousel/Carroussel"
 
 const Home = () => {
-  const userLoggedIn = useSelector((state) => state.user.userLoggedIn)
-  // const [userLoggedIn, setUserLoggedIn] = useState(true)
+  // const userLoggedIn = useSelector((state) => state.user.userLoggedIn)
+  const [userLoggedIn, setUserLoggedIn] = useState(true)
+
   return (
     <>
       <Header />

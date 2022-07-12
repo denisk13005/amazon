@@ -11,9 +11,10 @@ import {
 import axios from "axios"
 import "./checkoutForm.scss"
 import { useNavigate } from "react-router-dom"
+import { createUserOrder } from "../../firebase/apiDbFirebase"
 import { transactionDate } from "../../utils/Redux-toolkit/products"
 
-const CheckoutFormBuild = () => {
+const CheckoutFormBuild = ({ datas }) => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const totalPrice = useSelector((state) => state.products.totalPrice)
@@ -48,13 +49,13 @@ const CheckoutFormBuild = () => {
         console.log(response)
         if (response.data.success) {
           alert("paiement effectué")
-          dispatch(transactionDate(new Date().toString()))
           setProcessed(false)
+          dispatch(transactionDate(new Date().toLocaleDateString()))
           navigate("/userOrder")
-          // dispatch(reset())
         }
       } catch (err) {
         console.log(err)
+        alert("payment error please retry")
       }
     } else {
       console.log(error.message)
@@ -86,10 +87,10 @@ const stripePromise = loadStripe(
   "pk_test_51L4iIZK8J6YcJIPL93lpBPiRdRyF2z8KW6vfU5h8xQ1bC6Xtk6k24EPX0Z7OTdCeTodmcF4geq0XSPA8xV4F2BJU00QiIVyLXR"
 )
 
-const checkoutForm = () => {
+const checkoutForm = ({ datas }) => {
   return (
     <Elements stripe={stripePromise}>
-      <CheckoutFormBuild />
+      <CheckoutFormBuild datas={datas} />
     </Elements>
   )
 }

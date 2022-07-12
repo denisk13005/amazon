@@ -26,8 +26,26 @@
   border-right: 1px solid #d5d9d9;
   display: flex;
   justify-content: space-between;
-  padding: 10px 10px 20px;
+  padding: 10px 20px 20px;
   .left {
+    width: 60%;
+    .delivery {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .imgAndDesc {
+      display: flex;
+      align-items: center;
+      .imgContainer {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+      .descContainer {
+        margin-left: 30px;
+      }
+    }
   }
   .right {
     display: flex;
@@ -62,4 +80,5 @@
   border: 1px solid #d5d9d9;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding: 10px 20px;
 }
