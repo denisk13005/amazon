@@ -8,7 +8,8 @@
         "watch": "nodemon index.js",
         "client": "cd client && npm start",
         "install-client" : "cd client && npm install",
-        "build": "npm install && npm run install-client && npm run build"
+        "heroku-postbuild": "npm run install-client && npm run build",
+        "build": "cd client && npm run build"
     },
     "engines": {
         "node": "16.x"
